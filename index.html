@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        
+        
+<div class="card" style="width: 30rem;">
+  <img class="card-img-top" src="https://data.whicdn.com/images/310453460/original.jpg" alt="Card image cap" style="height: 15em;">
+  <div class="card-body">
+    <h1>Projeto Calculadora</h1>
+
+            <form method="POST">
+                <p>Número 1: </p>
+                <input type="text" class="form-control" name="n1" id="n1"><br>
+
+                <p>Número 2: </p>
+                <input type="text" class="form-control" name="n2" id="n2"><br><br>
+                
+                
+                <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-2.5">
+                        <button onclick="somar(document.getElementById('n1').value,document.getElementById('n2').value)" class="btn btn-warning">Somar</button>
+                      </div>
+                      <div class="col-3">
+                        <button onclick="subtrair(document.getElementById('n1').value,document.getElementById('n2').value)" class="btn btn-warning">Subtrair</button>
+                      </div>
+                      <div class="col-3.5">
+                        <button onclick="Dividir(document.getElementById('n1').value,document.getElementById('n2').value)"class="btn btn-warning">Dividir</button>
+                      </div>
+                      <div class="col-2">
+                        <button onclick="Multiplicar(document.getElementById('n1').value,document.getElementById('n2').value)"class="btn btn-warning">Multiplicar</button>
+                      </div>
+                    </div>
+                    <br>
+                  </div>
+            </form>
+  </div>
+</div>
+        <div id="foot">
+            <p>Create by Willyan Anjos -> 09/03/2020</p>
+        </div>
+</body>
+
+    <script>
+        function somar(n1,n2)
+        {
+            if(!n1 == ""){
+                if(!n2 == ""){
+                    var numero1 = parseInt(n1);
+                    var numero2 = parseInt(n2);
+                    var resultado = (numero1+numero2);
+                    alert("Soma: " + resultado);
+                }else{alert("Informe o segundo número!");}    
+            }else{alert("Informe o primeiro número!");}
+        }
+        function subtrair(n1,n2)
+        {
+            if(!n1 == ""){
+                if(!n2 == ""){
+                    var numero1 = parseInt(n1);
+                    var numero2 = parseInt(n2);
+                    var resultado = (numero1-numero2);
+                    alert("Subtrair: " + resultado);
+                }else{alert("Informe o segundo número!");}    
+            }else{alert("Informe o primeiro número!");}
+        }
+        function Dividir(n1,n2)
+        {
+            if(!n1 == ""){
+                if(!n2 == ""){
+                    var numero1 = parseInt(n1);
+                    var numero2 = parseInt(n2);
+                    var resultado = (numero1/numero2);
+                    alert("Divisão: " + resultado);
+                }else{alert("Informe o segundo número!");}    
+            }else{alert("Informe o primeiro número!");}            
+        }
+        function Multiplicar(n1,n2)
+        {
+            if(!n1 == ""){
+                if(!n2 == ""){
+                    var numero1 = parseInt(n1);
+                    var numero2 = parseInt(n2);
+                    var resultado = (numero1*numero2);
+                    alert("Multiplicação: " + resultado);
+                }else{alert("Informe o segundo número!");}    
+            }else{alert("Informe o primeiro número!");}
+        }
+    </script>
+</html>
